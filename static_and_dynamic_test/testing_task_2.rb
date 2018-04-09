@@ -3,37 +3,38 @@
 # Carry out dynamic testing on the code below.
 # Correct the errors below that you spotted in task 1.
 
-class CardGame
+class Card
+
+  attr_reader :suit, :value
 
   def initialize(suit, value)
     @suit = suit
     @value = value
   end
 
-  def check_for_ace(card)
-    if card.value == 1
+  def check_for_ace()
+    if value == 1
       return true
     else
       return false
     end
   end
 
-  def highest_card(card1, card2)
+  def self.highest_card(card1, card2)
     if card1.value > card2.value
-      return card1
+      return card1.suit
     else
-      return card2
+      return card2.suit
     end
   end
 
-
-  def cards_total(cards)
+  def self.cards_total(cards)
     total = 0
     for card in cards
       total += card.value
     end
-
-    return "You have a total of" + total
+    return "You have a total of " + total.to_s
   end
+
 
 end

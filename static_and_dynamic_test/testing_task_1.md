@@ -10,6 +10,8 @@
 ```ruby
 class CardGame
 
+  #no attr_readers
+
   def initialize(suit, value)
     @suit = suit
     @value = value; #don't need the semi-colon
@@ -17,6 +19,7 @@ class CardGame
 
   def checkforAce(card)
 #should use underscores between words, dont usually use camel case for methods in ruby
+#card has not been initialized
     if card.value = 1  
 #needs to be == 1
       return true
