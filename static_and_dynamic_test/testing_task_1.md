@@ -30,6 +30,7 @@ class CardGame
 
   dif highest_card(card1 card2)
   #should be def instead of dif
+  #should be self.highest_card
   # should have a comma between parameters
   if card1.value > card2.value
     return card.name  
@@ -43,7 +44,7 @@ end
 end   # this would end the class
 # should use indentation to make code more readable
 
-def self.cards_total(cards) #don't use self,
+def self.cards_total(cards)
 # function should be indented
   total #should assign that a value
   for card in cards
